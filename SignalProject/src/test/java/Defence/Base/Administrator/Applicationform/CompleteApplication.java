@@ -212,7 +212,7 @@ public class CompleteApplication {
 		textareaname.sendKeys("Workenvironmentdescriptionc");
 		waitForSeconds(2);
 		
-	                         //Section:	Remuneration / Employee Information //
+	                         //Section:	Remuneration  / Employee Information //
 		
 		WebElement Country_Of_Operation__c = driver.findElement(By.xpath("//button[@name='Country_Of_Operation__c']"));
 		Country_Of_Operation__c.click();
