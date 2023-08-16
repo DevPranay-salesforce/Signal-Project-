@@ -1,0 +1,29 @@
+package javaprogramms1;
+import java.util.ArrayList;
+
+public class LeapYearExample {
+	
+	    public static void main(String[] args) {
+	        int[] years = { 2000, 2004, 2008, 2010, 2012, 2016, 2020, 2021, 2024, 2030 };
+
+	        ArrayList<Integer> leapYears = new ArrayList<Integer>();
+	        ArrayList<Integer> nonLeapYears = new ArrayList<Integer>();
+
+	        for (int year : years) {
+	            if (isLeapYear1(year)) {
+	                leapYears.add(year);
+	            } else {
+	                nonLeapYears.add(year);
+	            }
+	        }
+
+	        System.out.println("Leap Years: " + leapYears);
+	        System.out.println("Non-Leap Years: " + nonLeapYears);
+	    }
+
+	    public static boolean isLeapYear1(int year) {
+	        return (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
+	    }
+	}
+
+

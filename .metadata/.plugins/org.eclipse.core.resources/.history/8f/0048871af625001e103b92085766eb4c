@@ -1,0 +1,12 @@
+package javaprogramms1;
+
+public class WedLoopClasss {
+public static void main(String[] args) {
+	int i = 1,sum=0;
+	for (int i1 = 0; i1 <= 10; i1++) {
+		System.out.println(""+i1);
+		sum=sum+i1;
+	}
+	System.out.println(""+sum);
+}
+}

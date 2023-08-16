@@ -1,0 +1,10 @@
+package javaprogramms1;
+
+public class StringDemoClass {
+	public static void main(String[] args) {
+		String str = "Hello Itech cloud pvt ltd.";
+		 char result = str.charAt(8);
+		int len = str.length();
+		System.out.println("" + len);
+	}
+}
