@@ -1,0 +1,22 @@
+package javaprogramms1;
+
+public class PracticeProgramms1{ 
+	
+	public static void teanegerCheck(int age) {
+		
+		if(age>15 && age<20) {
+			
+			 System.out.println("not a teeneger");
+		                       }
+		 else {
+			 
+			System.out.println("It is a teeneger");
+		}
+	}
+	
+	public static void main(String[] args) {
+		
+		teanegerCheck(33);
+		 
+	}
+}

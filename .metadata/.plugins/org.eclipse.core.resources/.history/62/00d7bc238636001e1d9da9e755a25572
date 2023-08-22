@@ -1,0 +1,53 @@
+package Defence.Base.Administrator.Applicationform;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class FieldsValidationsVerifications {
+	public static WebDriver driver;
+
+	public static void waitForSeconds(int sec) {
+
+		try {
+			Thread.sleep(sec * 1000);
+
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+	public static void setBrowser(String url) {
+		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get(url);
+		waitForSeconds(5);
+	}
+
+	public static void main(String[] args) {
+
+		// https://signalmutualindemnity--dev.sandbox.my.site.com/s/
+		// https://signalmutualindemnity--dev.sandbox.lightning.force.com/
+		String url = "https://signalmutualindemnity--dev.sandbox.my.site.com/s/";
+		String userName = "nisarg.shihora@psadvisory.com.dev";
+		String password = "Nisu@1999";
+
+		FieldsValidationsVerifications.setBrowser(url);
+		waitForSeconds(10);
+		
+		WebElement nameField46 = driver.findElement(By.xpath("//div[text()='Submit Form']']")); // Replace with
+		nameField46.click();
+		waitForSeconds(2);
+		
+		WebElement nameField25 = driver.findElement(By.xpath("//div[text()='Please enter Name of Organization']']")); // Replace with
+		nameField25.sendKeys("enter Name of Organization");
+		waitForSeconds(2);
+		
+		
+		
+		driver.quit();
+	}
+}
