@@ -481,7 +481,7 @@ public class CompleteApplication {
 		//UploadFilesclickdoc.click();
 		UploadFilesclickdoc.sendKeys("C:\\Users\\PC2\\eclipse-workspace\\SignalProject\\UploadFiles\\saurabh Venkaria -08-16-2023 12-14-06.docx");
 		
-		waitForSeconds(5);
+		waitForSeconds(5); 
 		driver.quit();
 
 //		Insurance Agency or Broker
