@@ -1,7 +1,0 @@
-0000000000000000000000000000000000000000 7b55dfeda4253bd5a5362378a0085391a6f68f1d pranaypsadvisory <pranay.shelke@psadvisory.com> 1690289483 +0530	commit (initial): first commit
-7b55dfeda4253bd5a5362378a0085391a6f68f1d 7b55dfeda4253bd5a5362378a0085391a6f68f1d pranaypsadvisory <pranay.shelke@psadvisory.com> 1690289499 +0530	Branch: renamed refs/heads/master to refs/heads/main
-7b55dfeda4253bd5a5362378a0085391a6f68f1d d07e3cbb9cc904e5a537cd70f0d385b29d7f7325 pranaypsadvisory <pranay.shelke@psadvisory.com> 1690289980 +0530	commit: f15
-d07e3cbb9cc904e5a537cd70f0d385b29d7f7325 d07e3cbb9cc904e5a537cd70f0d385b29d7f7325 pranaypsadvisory <pranay.shelke@psadvisory.com> 1690290459 +0530	Branch: renamed refs/heads/main to refs/heads/sat
-d07e3cbb9cc904e5a537cd70f0d385b29d7f7325 36837526a85fdb84dbc452e65e7143d95fb0be41 pranaypsadvisory <pranay.shelke@psadvisory.com> 1690291579 +0530	pull origin main: Fast-forward
-36837526a85fdb84dbc452e65e7143d95fb0be41 72840176929540e02421591bc5c908b4915bbdd4 pranaypsadvisory <pranay.shelke@psadvisory.com> 1690351476 +0530	commit: ggggggggggggg
-72840176929540e02421591bc5c908b4915bbdd4 e71446bd424a17e9ea07f160216c23260df91d1e pranaypsadvisory <pranay.shelke@psadvisory.com> 1690351490 +0530	pull --progress -v --no-rebase origin sat: Merge made by the 'ort' strategy.

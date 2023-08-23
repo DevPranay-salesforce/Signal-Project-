@@ -1,88 +1,161 @@
 package Defence.Base.Administrator.Applicationform;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class FieldsValidationsVerifications {
 	public static WebDriver driver;
+
+	public static WebDriver setChromeDriver() {
+		WebDriverManager.chromedriver().setup();
+		return new ChromeDriver();}
+
+	public static void clickElementWithJS(WebElement element) {
+		JavascriptExecutor j = (JavascriptExecutor) driver;
+		j.executeScript("arguments[0].click();", element);}
 
 	public static void waitForSeconds(int sec) {
 
 		try {
-			Thread.sleep(sec * 1000);
-
-		} catch (InterruptedException e) {
+			Thread.sleep(sec * 1000);} 
+		catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
+			e.printStackTrace();}}
 
 	public static void setBrowser(String url) {
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-		driver = new ChromeDriver();
+		driver = FieldsValidationsVerifications.setChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
-		waitForSeconds(5);
-	}
+		waitForSeconds(5);}
 
 	public static void main(String[] args) {
-
-		// https://signalmutualindemnity--dev.sandbox.my.site.com/s/
-		// https://signalmutualindemnity--dev.sandbox.lightning.force.com/
 		String url = "https://signalmutualindemnity--dev.sandbox.my.site.com/s/";
-		String userName = "nisarg.shihora@psadvisory.com.dev";
-		String password = "Nisu@1999";
-
 		FieldsValidationsVerifications.setBrowser(url);
 		waitForSeconds(10);
-
+		
+		                              //Section::Insured Information//
+		
 		WebElement nameField46 = driver.findElement(By.xpath("//button[text()='Submit Form']")); // Replace with
 		nameField46.click();
-		waitForSeconds(2);
+		waitForSeconds(5);
+		
+		//1
+		WebElement nameOfOrganizationBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Name of Organization']"));
+		if(nameOfOrganizationBlankValidation.getText().equals("Please enter Name of Organization")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+nameOfOrganizationBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+nameOfOrganizationBlankValidation.getText());}
+		
+		//2
+		WebElement addressBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Address']"));
+		if(addressBlankValidation.getText().equals("Please enter Address")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+addressBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+addressBlankValidation.getText());}
+		
+		//3
+		WebElement typeOfOrgBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter type of Organization']"));
+		if(typeOfOrgBlankValidation.getText().equals("Please enter type of Organization")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+typeOfOrgBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+typeOfOrgBlankValidation.getText());}
+		
+		//4
+		WebElement FirstNameBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter First Name']"));
+		if(FirstNameBlankValidation.getText().equals("Please enter First Name")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+FirstNameBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+FirstNameBlankValidation.getText());}
+		
+		//5
+		WebElement LastNameBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Last Name']"));
+		if(LastNameBlankValidation.getText().equals("Please enter Last Name")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+LastNameBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+LastNameBlankValidation.getText());}
+		 
+		//6
+		WebElement ContactEmailBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter valid Contact Email']"));
+		if(ContactEmailBlankValidation.getText().equals("Please enter valid Contact Email")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+ContactEmailBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+ContactEmailBlankValidation.getText());}
+		//7
+		WebElement ContactPhoneBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter valid Contact Phone']"));
+		if(ContactPhoneBlankValidation.getText().equals("Please enter valid Contact Phone")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+ContactPhoneBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+ContactPhoneBlankValidation.getText());}
+		
+		                            //Section::Contract Information//
+		//8
+		WebElement ContractvaliddateBlankValidation = driver.findElement(By.xpath("//div[text()='Please select vald date']"));
+		if(ContractvaliddateBlankValidation.getText().equals("Please select vald date")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+ContractvaliddateBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+ContractvaliddateBlankValidation.getText());}
+		
+		//9
+		WebElement typeofContrvaliddateBlankValidation = driver.findElement(By.xpath("//div[text()='Please select type of Contract']"));
+		if(typeofContrvaliddateBlankValidation.getText().equals("Please select type of Contract")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+typeofContrvaliddateBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+typeofContrvaliddateBlankValidation.getText());}
+		
+		//10
+		WebElement  ContractNumbervaliddateBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Contract Number']"));
+		if(ContractNumbervaliddateBlankValidation.getText().equals("Please enter Contract Number")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+ContractNumbervaliddateBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+ContractNumbervaliddateBlankValidation.getText());}
 
-		WebElement nameField26 = driver.findElement(By.xpath("//div[text()='Please enter Name of Organization']")); // Replace
-																													// with
-		waitForSeconds(2);
-		// Get the text of the element
-		String actualText = nameField26.getText();
-		// Validate the text
-		String expectedText = "Please enter Name of Organization";
-
-		if (actualText.equals(expectedText)) {
-			System.out.println("Validation passed: " + actualText);
-		} else {
-			System.out.println("Validation failed. Expected: " + expectedText + ", Actual: " + actualText);
-		}
-
-		WebElement nameField27 = driver.findElement(By.xpath("//div[text()='Please enter Address']")); // Replace with
-		waitForSeconds(2);
-		// Get the text of the element
-		String actualText1 = nameField27.getText();
-		// Validate the text
-		String expectedText1 = "Please enter Address";
-
-		if (actualText1.equals(expectedText1)) {
-			System.out.println("Validation passed: " + actualText1);
-		} else {
-			System.out.println("Validation failed.Expected: " + expectedText1 + ", Actual: " + actualText1);
-		}
-		WebElement toggleButton = driver
-				.findElement(By.xpath("//span[(text()= 'Are you the prime contractor on these contracts?')]"));
-
-		// Click the toggle button
-		toggleButton.click();
-
-		// Check the state of the toggle button
-		boolean isToggledOn = toggleButton.isSelected();
-
-		if (isToggledOn) {
-			System.out.println("Toggle button is ON");
-		} else {
-			System.out.println("Toggle button is OFF");
-		}
-
+		//11
+		WebElement  CompletefieldvaliddateBlankValidation = driver.findElement(By.xpath("//div[text()='Complete this field.']"));
+		if(CompletefieldvaliddateBlankValidation.getText().equals("Complete this field.")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+CompletefieldvaliddateBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+CompletefieldvaliddateBlankValidation.getText());}
+		
+		//12
+		WebElement DescrOpervaliddateBlankValidation = driver.findElement(By.xpath("//div[text()='Please Enter Description of Operations']"));
+		if(DescrOpervaliddateBlankValidation.getText().equals("Please Enter Description of Operations")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+DescrOpervaliddateBlankValidation.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+DescrOpervaliddateBlankValidation.getText());}
+		
+//		                        //Section::Add Additional Insured//
+//		//1
+//		WebElement AddNameOfOrgBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Name of Organization']"));
+//		if(AddNameOfOrgBlankValidation.getText().equals("Please enter Name of Organization")) {
+//			System.out.println("Pass :Blank Field Validation Message is Displayed :"+AddNameOfOrgBlankValidation.getText());}
+//		else {
+//			System.out.println("Failed :Blank Field Validation Message is Displayed :"+AddNameOfOrgBlankValidation.getText());}
+//		//2 
+//		WebElement AddAddressBlankValidation = driver.findElement(By.xpath("//div[text()='Please enter Address']"));
+//		if(AddAddressBlankValidation.getText().equals("Please enter Address")) {
+//			System.out.println("Pass :Blank Field Validation Message is Displayed :"+AddAddressBlankValidation.getText());}
+//		else {
+//			System.out.println("Failed :Blank Field Validation Message is Displayed :"+AddAddressBlankValidation.getText());}
+//        //3
+//		WebElement AddTypeOfOrgBlankValidation = driver.findElement(By.xpath("//div[text()='Please select type of Organization']"));
+//		if(AddTypeOfOrgBlankValidation.getText().equals("Please select type of Organization")) {
+//			System.out.println("Pass :Blank Field Validation Message is Displayed :"+AddTypeOfOrgBlankValidation.getText());}
+//		else {
+//			System.out.println("Failed :Blank Field Validation Message is Displayed :"+AddTypeOfOrgBlankValidation.getText());}
+//	
+//		
+		
+		
+		
+		
+		
+		waitForSeconds(5);
 		driver.quit();
 	}
 }
