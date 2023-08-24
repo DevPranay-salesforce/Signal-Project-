@@ -747,13 +747,6 @@ public class CompleteApplicationWithSpecificContractsDBA {
 
 		driver.quit();
 
-//		Insurance Agency or Broker 
-//		Broker Title
-//		First Name
-//		Last Name
-//		Broker Email
-//		Broker Phone
-//
 
 	}
 }
