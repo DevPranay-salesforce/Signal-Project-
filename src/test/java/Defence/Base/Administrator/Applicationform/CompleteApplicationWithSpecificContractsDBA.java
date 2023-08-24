@@ -11,7 +11,7 @@ import org.openqa.selenium.interactions.Actions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class CompleteApplicationDBA {
+public class CompleteApplicationWithSpecificContractsDBA {
 	public static WebDriver driver;
 
 	public static WebDriver setChromeDriver() {
@@ -37,7 +37,7 @@ public class CompleteApplicationDBA {
 
 	public static void setBrowser(String url) {
 		System.setProperty("webdriver.chrome.driver", "Drivers/chromedriver.exe");
-		driver = CompleteApplicationDBA.setChromeDriver();
+		driver = CompleteApplicationWithSpecificContractsDBA.setChromeDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
 		waitForSeconds(5);
@@ -56,10 +56,10 @@ public class CompleteApplicationDBA {
 //		String password = "MissionSignal@1234567";
 //		
 
-		CompleteApplicationDBA.setBrowser(url);
+		CompleteApplicationWithSpecificContractsDBA.setBrowser(url);
 		// waitForSeconds(2);
 
-		// Section:Insured Information //
+		               // Section:Insured Information //
 
 		WebElement Organize = driver.findElement(By.xpath("//input[@name='primeOrganizeName']"));
 		Organize.sendKeys("Name of Organization");
@@ -85,7 +85,7 @@ public class CompleteApplicationDBA {
 		primeState.click();
 		// waitForSeconds(2);
 
-		WebElement Alabama = driver.findElement(By.xpath("//span[@title='Alabama']")); // Replace with
+		WebElement Alabama = driver.findElement(By.xpath("//span[@title='Alabama']")); 
 		Alabama.click();
 		// waitForSeconds(2);
 
@@ -367,7 +367,7 @@ public class CompleteApplicationDBA {
 //		waitForSeconds(2);
 
 		
-		// ********** Section: Remuneration / Employee Information******************* //
+		            // ********** Section: Remuneration / Employee Information******************* //
 
 		WebElement Country_Of_Operation__c = driver.findElement(By.xpath("//button[@name='Country_Of_Operation__c']"));
 		Country_Of_Operation__c.click();
@@ -419,7 +419,7 @@ public class CompleteApplicationDBA {
 		Total_Remuneration_LN__c.sendKeys("98787");
 		waitForSeconds(10);
 
-		// ********** Section::Add Remuneration / Employee Information******************* //
+		                 // ********** Section::Add Remuneration / Employee Information******************* //
 		
 
 		WebElement buttonAddCountries = driver.findElement(By.xpath("//button[text()='Add Countries']")); 
@@ -676,7 +676,7 @@ public class CompleteApplicationDBA {
 		WebElement UploadFiles = driver.findElement(By.xpath("//input[@name='fileUploader']"));
 		UploadFiles.clear();
 		UploadFiles.sendKeys("C:\\Users\\PC2\\eclipse-workspace\\SignalProject\\UploadFiles\\N2G LOGO.png");
-		waitForSeconds(8);
+		waitForSeconds(15);
 
 		WebElement ButtonDoneone = driver.findElement(By.xpath("//span[text()='Done']"));
 		ButtonDoneone.click();
@@ -685,7 +685,7 @@ public class CompleteApplicationDBA {
 		WebElement UploadFilesclickpdf = driver.findElement(By.xpath("//input[@name='fileUploader']"));
 		UploadFilesclickpdf.clear();
 		UploadFilesclickpdf.sendKeys("C:\\Users\\PC2\\eclipse-workspace\\SignalProject\\UploadFiles\\com222.pdf");
-		waitForSeconds(8);
+		waitForSeconds(15);
 
 		List<WebElement> ButtonDonesecond = driver.findElements(By.xpath("//span[text()='Done']"));
 		ButtonDonesecond.get(0).click();
@@ -694,7 +694,7 @@ public class CompleteApplicationDBA {
 		WebElement UploadFilesclickdoc = driver.findElement(By.xpath("//input[@name='fileUploader']"));
 		UploadFilesclickdoc.clear();
 		UploadFilesclickdoc.sendKeys("C:\\Users\\PC2\\eclipse-workspace\\SignalProject\\UploadFiles\\DBAInvoiceDocument.docx");
-		waitForSeconds(8);
+		waitForSeconds(15);
 
 		List<WebElement> ButtonDone = driver.findElements(By.xpath("//span[text()='Done']"));
 		ButtonDone.get(0).click();
@@ -727,41 +727,21 @@ public class CompleteApplicationDBA {
 		buttonSubmitForm.click();
 		waitForSeconds(10);
 		
+		// Get the text of the element & Validate the text massage //
 		
-		
-		
-
-//		WebElement submittedMessege = driver.findElement(By.xpath("//P[text()='The form is successfully submitted.']"));
-//		submittedMessege.sendKeys("Other_security_location__c");
-//		waitForSeconds(1);
+	    WebElement  SpecificContractThankyouMessege = driver.findElement(By.xpath("//P[text()='Thank you']"));
+		if(SpecificContractThankyouMessege.getText().equals("Thank you")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+SpecificContractThankyouMessege.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+SpecificContractThankyouMessege.getText());}
 
 		// Get the text of the element & Validate the text massage //
-
-		WebElement ThankyouMessege = driver.findElement(By.xpath("//P[text()='Thank you']"));
-		waitForSeconds(2);
-		// Get the text of the element
-		String actualTextt = ThankyouMessege.getText();
-		// Validate the text
-		String expectedTextt = "Thank you";
-		if (actualText.equals(expectedTextt)) {
-			System.out.println("Validation passed: " + actualTextt);
-		} else {
-			System.out.println("Validation failed. Expected: " + expectedTextt + ", Actual: " + actualTextt);
-		}
-
-		// Get the text of the element & Validate the text massage //
-
-		WebElement successfullMessege = driver.findElement(By.xpath("//P[text()='The form is successfully submitted.']"));
-		waitForSeconds(2);
-		// Get the text of the element
-		String actuallTextt = successfullMessege.getText();
-		// Validate the text
-		String expecteddTextt = "The form is successfully submitted.";
-		if (actualText.equals(expecteddTextt)) {
-			System.out.println("Validation passed: " + actuallTextt);
-		} else {
-			System.out.println("Validation failed. Expected: " + expecteddTextt + ", Actual: " + actuallTextt);
-		}
+		
+		WebElement  SpecificContractFormSubmitMessege = driver.findElement(By.xpath("//P[text()='The form is successfully submitted.']"));
+		if(SpecificContractFormSubmitMessege.getText().equals("The form is successfully submitted.")) {
+			System.out.println("Pass :Blank Field Validation Message is Displayed :"+SpecificContractFormSubmitMessege.getText());}
+		else {
+			System.out.println("Failed :Blank Field Validation Message is Displayed :"+SpecificContractFormSubmitMessege.getText());}
 		
 		waitForSeconds(10);
 
