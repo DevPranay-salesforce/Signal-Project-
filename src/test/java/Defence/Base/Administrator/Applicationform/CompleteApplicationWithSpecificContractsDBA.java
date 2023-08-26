@@ -18,6 +18,15 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		WebDriverManager.chromedriver().setup();
 		return new ChromeDriver();
 	}
+	
+//	public static void clickScrollElement(WebElement element) {
+//		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+//		jsExecutor.executeScript("scrollIntoView(true);", element);
+//		}
+//	
+//	 WebElement elementToScroll = driver.findElement(By.xpath("your_xpath_here"));
+
+    
 
 	public static void clickElementWithJS(WebElement element) {
 		JavascriptExecutor j = (JavascriptExecutor) driver;
@@ -727,7 +736,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		buttonSubmitForm.click();
 		waitForSeconds(10);
 		
-		// Get the text of the element & Validate the text massage //
+		// Get the text of the element & Validate the text massage // 
 		
 	    WebElement  SpecificContractThankyouMessege = driver.findElement(By.xpath("//P[text()='Thank you']"));
 		if(SpecificContractThankyouMessege.getText().equals("Thank you")) {
