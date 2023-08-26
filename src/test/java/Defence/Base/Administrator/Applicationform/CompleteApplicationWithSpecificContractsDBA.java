@@ -62,7 +62,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		               // Section:Insured Information //
 
 		WebElement Organize = driver.findElement(By.xpath("//input[@name='primeOrganizeName']"));
-		Organize.sendKeys("Name of Organization");
+		Organize.sendKeys("PranaySignal11");
 		// waitForSeconds(2);
 
 		WebElement primeYear = driver.findElement(By.xpath("//input[@name='primeYearInBusiness']"));
@@ -133,7 +133,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		// waitForSeconds(2);
 
 		WebElement primeContactEmail = driver.findElement(By.xpath("//input[@name='primeContactEmail']"));
-		primeContactEmail.sendKeys("primeContactEmail@.com");
+		primeContactEmail.sendKeys("primeContact@Email.com");
 		// waitForSeconds(2);
 
 		WebElement primeContactPhone = driver.findElement(By.xpath("//input[@name='primeContactPhone']"));
@@ -389,11 +389,11 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		// waitForSeconds(2);
 
 		WebElement Number_US_national__c = driver.findElement(By.xpath("//input[@name='Number_US_national__c']"));
-		Number_US_national__c.sendKeys("NumberUSnationalc");
+		Number_US_national__c.sendKeys("54564");
 		// waitForSeconds(2);
 
 		WebElement Total_Remuneration_USN__c = driver.findElement(By.xpath("//input[@name='Total_Remuneration_USN__c']"));
-		Total_Remuneration_USN__c.sendKeys("TotalRemunerationUSNc");
+		Total_Remuneration_USN__c.sendKeys("8958");
 		// waitForSeconds(2);
 
 		WebElement toggleremThirdCountry = driver.findElement(By.xpath("//span[(text()='Include Third-Country national employees ')]"));
@@ -571,11 +571,11 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		waitForSeconds(1);
 
 		WebElement Flight_crew__c = driver.findElement(By.xpath("//input[@name='Flight_crew__c']"));
-		Flight_crew__c.sendKeys("11254");
+		Flight_crew__c.sendKeys("154");
 		waitForSeconds(1);
 
 		WebElement Number_of_flights__c = driver.findElement(By.xpath("//input[@name='Number_of_flights__c']"));
-		Number_of_flights__c.sendKeys("554Number_of_flights__c");
+		Number_of_flights__c.sendKeys("55");
 		waitForSeconds(1);
 
 		WebElement Location_of_base_for_flights__c = driver
@@ -718,7 +718,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 				+ "and the insurer may withdraw or modify any outstanding quotations and/or authorization or agreements to bind the insurance.";
 				
 		if (actualText.equals(expectedText)) {
-			System.out.println("Validation passed: " + actualText);
+			System.out.println("Validation passed FraudDisclosure: " + actualText);
 		} else {
 			System.out.println("Validation failed. Expected: " + expectedText + ", Actual: " + actualText);
 		}
@@ -743,7 +743,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		else {
 			System.out.println("Failed :Blank Field Validation Message is Displayed :"+SpecificContractFormSubmitMessege.getText());}
 		
-		waitForSeconds(10);
+		waitForSeconds(1000);
 
 		driver.quit();
 
