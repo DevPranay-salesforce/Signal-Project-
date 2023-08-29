@@ -283,20 +283,20 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		             // ***************Contract Information::Add Contract pop// up*********************//
 
 		
-		WebElement buttonAddContract = driver.findElement(By.xpath("//button[text()='Add Contract']")); // Replace
+		WebElement buttonAddContract = driver.findElement(By.xpath("//button[text()='Add Contract']")); 
 		buttonAddContract.click();
 		waitForSeconds(2);
 
-		WebElement proposedEffectiveDateContract = driver.findElement(By.xpath("//input[@name='proposedEffectiveDate']")); // Replace
+		WebElement proposedEffectiveDateContract = driver.findElement(By.xpath("//input[@name='proposedEffectiveDate']")); 
 		proposedEffectiveDateContract.click();
 		proposedEffectiveDateContract.sendKeys("1/13/2023");
 
-		WebElement requestedQuoteDateContract = driver.findElement(By.xpath("//input[@name='requestedQuoteDate']")); // Replace
+		WebElement requestedQuoteDateContract = driver.findElement(By.xpath("//input[@name='requestedQuoteDate']")); 
 		requestedQuoteDateContract.click();
 		requestedQuoteDateContract.sendKeys("1/14/2023");
 		waitForSeconds(2);
 
-		WebElement typeofContractplist = driver.findElement(By.xpath("//button[@name='typeofContract']")); // Replace
+		WebElement typeofContractplist = driver.findElement(By.xpath("//button[@name='typeofContract']")); 
 		typeofContractplist.click();
 		waitForSeconds(2);
 
@@ -322,7 +322,7 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		contractLength.sendKeys("77");
 		waitForSeconds(1);
 
-		WebElement contractCountryplist = driver.findElement(By.xpath("//button[@name='contractCountry']")); // Replace
+		WebElement contractCountryplist = driver.findElement(By.xpath("//button[@name='contractCountry']")); 
 		contractCountryplist.click();
 		waitForSeconds(2);
 
@@ -645,8 +645,9 @@ public class CompleteApplicationWithSpecificContractsDBA {
 		Translator_type__c.click();
 		waitForSeconds(2);
 
-//		
-//		WebElement ele = driver.findElement(By.xpath("//button[text()='Submit Form']")); //To move an element write such program when dropdown override to other page//
+//		//***********************//To move an element write such program when dropdown override to other page//**********************//
+		
+//		WebElement ele = driver.findElement(By.xpath("//button[text()='Submit Form']")); 
 //		Actions act =new  Actions(driver);
 //		act.moveToElement(ele).build().perform();
 //		
