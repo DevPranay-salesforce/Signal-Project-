@@ -59,7 +59,7 @@ public class CompleteApplicationWithAllContractsDBA2 {
 		CompleteApplicationWithAllContractsDBA2.setBrowser(url);
 		// waitForSeconds(2);
 
-		               // Section:Insured Information //
+		               // Section:Insured Information 1 //
 
 		WebElement Organize = driver.findElement(By.xpath("//input[@name='primeOrganizeName']"));
 		Organize.sendKeys("Name of Organization 13092023");
