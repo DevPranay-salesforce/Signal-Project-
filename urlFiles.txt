@@ -1,0 +1,15 @@
+// https://signalmutualindemnity--dev.sandbox.my.site.com/s/
+// https://signalmutualindemnity--dev.sandbox.lightning.force.com/
+String userName = "nisarg.shihora@psadvisory.com.dev";
+String password = "Nisu@1999";
+
+	//To move an element write such program when Dropdown override to other page//
+	WebElement ele = driver.findElement(By.xpath("//button[text()='Submit Form']")); //To move an element write such program when dropdown override to other page//
+		Actions act =new  Actions(driver);
+		act.moveToElement(ele).build().perform();
+		
+//https://login.salesforce.com/
+
+
+//saurav.vekariya@psadvisory.com.signal
+MissionSignal@1234567 //
